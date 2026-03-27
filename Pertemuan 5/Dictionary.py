@@ -1,5 +1,5 @@
 #membuat struktur data dictionary
-userlogin ={"name":"Nadya cakep banget","age":23, "Role":"penguasa dunia"}
+userlogin ={"name":"Akbar Fabiansyah","age":19, "Role":"Cyber Security"}
 print(type(userlogin));
 
 #mengakses data dalam dictionary
@@ -13,7 +13,7 @@ print(userlogin.keys())
 print(userlogin.values())
 
 #menambahkan data baru dalam dictionary
-userlogin["email"] = "nadyacakep@gmail.com"
+userlogin["email"] = "AkbarFabiansyah@gmail.com"
 print(userlogin)
 
 #menghapus data big_On dari dictionary
@@ -25,9 +25,9 @@ userlogin["name"] = "user"
 print(userlogin)
 
 #nested dictionary
-dbUser = {"user1":{"name":"Nadya","age":23, "Role":"ratu-atlantis"},
-"user2":{"name":"Linda","age":25, "Role":"anak baik"},
-"user3":{"name":"Rully","age":35, "Role":"anak jahat"}}
+dbUser = {"user1":{"name":"Akbar","age":19, "Role":"data analyst"},
+"user2":{"name":"Ucok","age":25, "Role":"Backend Developer"},
+"user3":{"name":"Joni","age":20, "Role":"frontend Developer"}}
 
 print(dbUser)
 #akses value base key
