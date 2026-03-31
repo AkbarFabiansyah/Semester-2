@@ -1,11 +1,18 @@
-x = 4
-y = 1
+my_list = [10, 1, 8, 3, 5]
 
-a = x & y
-b = x | y
-c = ~x
-d = x ^ 5
-e = x >> 2
-f = x << 2
+# Menukar elemen ujung ke ujung secara manual
+my_list[0], my_list[4] = my_list[4], my_list[0]
+my_list[1], my_list[3] = my_list[3], my_list[1]
 
-print(a, b, c, d, e, f)
+print(my_list)
+
+# yang menggunakan for
+
+my_list = [10, 1, 8, 3, 5]
+length = len(my_list)
+
+# Melakukan perulangan hanya sampai setengah panjang list (length // 2)
+for i in range(length // 2):
+    my_list[i], my_list[length - i - 1] = my_list[length - i - 1], my_list[i]
+
+print(my_list)
