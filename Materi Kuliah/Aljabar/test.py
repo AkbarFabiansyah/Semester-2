@@ -1,1 +1,0 @@
-print ("test buat di antigravity")
