@@ -36,12 +36,16 @@ class stack:
         return self.top.data
 #mwthode display untuk menampilkan isi stack
     def display(self):
-        current_node = self.top
-        while current_node:
-            print(current_node.data, end=' ')
-            current_node = current_node.next
-        print("none")
-
+        if self.is_empty():
+            print("stack kosong")
+            return
+        current = self.top
+        nodes = []
+        while current:
+            nodes.append(str(current.data))
+            current = current.next
+        print(" -> ".join(nodes) + " -> none")
+        
 #contoh penggunaan
 mystack  = stack()
 print (mystack.is_empty())
