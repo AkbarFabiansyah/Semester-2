@@ -1,18 +1,58 @@
-my_list = [10, 1, 8, 3, 5]
+#membuat queue dari linked ;ost 
+#buat class node
 
-# Menukar elemen ujung ke ujung secara manual
-my_list[0], my_list[4] = my_list[4], my_list[0]
-my_list[1], my_list[3] = my_list[3], my_list[1]
+class node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
 
-print(my_list)
+# membuat kelas myqueue
+class Queue:
+    def __init__(self):
+        self.head = None
+        self.tail = None
+        self.size = 0
 
-# yang menggunakan for
+# membuat methode enqueue
+    def enqueue(self, data):
+        new_node = node(data)
+        if  self.is_empty():
+            self.head = new_node
+            self.tail = new_node
+        else:
+            self.tail.next = new_node
+            self.tail = new_node
+        self.size += 1
+        print(f"Data {data} berhasil ditambahkan ke antrean")
 
-my_list = [10, 1, 8, 3, 5]
-length = len(my_list)
+#membuat method dequeue : input element atau data
+    def dequeue(self):
+        if self.is_empty():
+            print("queue is empty")
+            return None
+        data = self.head.data
+        self.head = self.head.next
+        self.size -= 1
+        print(f"dequeued : {data} ")
+        return data
 
-# Melakukan perulangan hanya sampai setengah panjang list (length // 2)
-for i in range(length // 2):
-    my_list[i], my_list[length - i - 1] = my_list[length - i - 1], my_list[i]
+    def peek(self):
+        if self.is_empty():
+            print("queue is empty")
+            return None
+        return self.head.data
 
-print(my_list)
+#methode untuk mengecek apakah queue kosong atau tidak
+    def is_empty(self):
+        return self.size == 0
+
+#methode untuk menampilkan queue
+    def printQueue(self):
+        if self.is_empty():
+            print("queue is empty")
+            return None
+
+Antrian = Queue()
+Antrian.enqueue("andi")
+Antrian.enqueue("budi")
+Antrian.enqueue("caca")
